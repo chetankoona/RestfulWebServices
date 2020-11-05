@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @RequestMapping(method = RequestMethod.GET, value = "/hello")
     public String sayHello(){
-        return "Hello World";
+        return "Hello World".repeat(2);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/hellobean")

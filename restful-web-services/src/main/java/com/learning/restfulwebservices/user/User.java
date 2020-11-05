@@ -1,5 +1,7 @@
 package com.learning.restfulwebservices.user;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class User {
@@ -14,7 +16,9 @@ public class User {
     }
 
     private Integer id;
+    @Size(min = 2,message = "Name must be minimum of size 2")
     private String name;
+    @Past(message = "DOB must be in past")
     private Date birthDate;
 
     public Integer getId() {
